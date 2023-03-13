@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem.XR;
 using UnityEngine.InputSystem.XR.Haptics;
 
 public class LeverSwitch : MonoBehaviour
 {
+
     public HingeJoint hinge;
     public float leverErrorValue;
-    private bool isSelecting = false;
+    public bool isSelecting = false;
     public bool triggered = false;
-    
+
 
     // Update is called once per frame
     void Update()
@@ -30,8 +32,8 @@ public class LeverSwitch : MonoBehaviour
             triggered = false;
         }
 
-        //Debug.Log(leverXRotationValue);
     }
+
 
     public void SetSelectOn()
     {
@@ -42,4 +44,5 @@ public class LeverSwitch : MonoBehaviour
     {
         isSelecting = false;
     }
+
 }
